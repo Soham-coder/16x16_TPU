@@ -8,7 +8,7 @@ module test_top;
 localparam DATA_WIDTH = 8;
 localparam OUT_DATA_WIDTH = 16;
 localparam SRAM_DATA_WIDTH = 32;
-localparam WEIGHT_NUM = 25, WEIGHT_WIDTH = 4;
+localparam WEIGHT_NUM = 25, WEIGHT_WIDTH = 4; //Need to comment
 
 //====== module I/O =====
 reg clk;
@@ -545,52 +545,52 @@ task data2sram;
 	
 	for(i = 0; i < 128; i=i+1)begin
 		if(i < (32*3+3))begin
-		sram_128x32b_a0.char2sram(i,{tmp_mat1[0][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[1][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[2][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[3][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH]});
-		sram_128x32b_a1.char2sram(i,{tmp_mat1[4][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[5][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[6][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[7][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH]});
-		sram_128x32b_a2.char2sram(i,{tmp_mat1[8][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[9][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[10][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[11][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH]});
-		sram_128x32b_a3.char2sram(i,{tmp_mat1[12][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[13][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[14][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[15][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH]});
-		sram_128x32b_a4.char2sram(i,{tmp_mat1[16][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[17][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[18][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[19][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH]});
-		sram_128x32b_a5.char2sram(i,{tmp_mat1[20][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[21][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[22][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[23][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH]});
-		sram_128x32b_a6.char2sram(i,{tmp_mat1[24][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[25][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[26][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[27][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH]});
-		sram_128x32b_a7.char2sram(i,{tmp_mat1[28][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[29][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[30][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[31][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH]});
+		sram_256x32b_a0.char2sram(i,{tmp_mat1[0][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[1][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[2][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[3][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH]});
+		sram_256x32b_a1.char2sram(i,{tmp_mat1[4][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[5][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[6][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[7][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH]});
+		sram_256x32b_a2.char2sram(i,{tmp_mat1[8][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[9][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[10][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[11][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH]});
+		sram_256x32b_a3.char2sram(i,{tmp_mat1[12][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[13][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[14][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[15][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH]});
+		sram_256x32b_a4.char2sram(i,{tmp_mat1[16][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[17][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[18][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[19][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH]});
+		sram_256x32b_a5.char2sram(i,{tmp_mat1[20][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[21][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[22][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[23][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH]});
+		sram_256x32b_a6.char2sram(i,{tmp_mat1[24][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[25][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[26][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[27][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH]});
+		sram_256x32b_a7.char2sram(i,{tmp_mat1[28][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[29][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[30][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat1[31][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH]});
 
-		sram_128x32b_b0.char2sram(i,{tmp_mat2[0][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[1][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[2][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[3][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH]});
-		sram_128x32b_b1.char2sram(i,{tmp_mat2[4][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[5][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[6][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[7][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH]});
-		sram_128x32b_b2.char2sram(i,{tmp_mat2[8][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[9][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[10][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[11][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH]});
-		sram_128x32b_b3.char2sram(i,{tmp_mat2[12][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[13][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[14][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[15][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH]});
-		sram_128x32b_b4.char2sram(i,{tmp_mat2[16][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[17][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[18][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[19][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH]});
-		sram_128x32b_b5.char2sram(i,{tmp_mat2[20][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[21][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[22][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[23][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH]});
-		sram_128x32b_b6.char2sram(i,{tmp_mat2[24][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[25][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[26][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[27][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH]});
-		sram_128x32b_b7.char2sram(i,{tmp_mat2[28][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[29][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[30][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[31][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH]});
+		sram_256x32b_b0.char2sram(i,{tmp_mat2[0][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[1][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[2][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[3][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH]});
+		sram_256x32b_b1.char2sram(i,{tmp_mat2[4][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[5][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[6][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[7][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH]});
+		sram_256x32b_b2.char2sram(i,{tmp_mat2[8][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[9][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[10][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[11][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH]});
+		sram_256x32b_b3.char2sram(i,{tmp_mat2[12][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[13][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[14][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[15][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH]});
+		sram_256x32b_b4.char2sram(i,{tmp_mat2[16][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[17][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[18][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[19][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH]});
+		sram_256x32b_b5.char2sram(i,{tmp_mat2[20][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[21][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[22][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[23][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH]});
+		sram_256x32b_b6.char2sram(i,{tmp_mat2[24][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[25][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[26][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[27][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH]});
+		sram_256x32b_b7.char2sram(i,{tmp_mat2[28][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[29][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[30][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH], tmp_mat2[31][(DATA_WIDTH*(i+1)-1) -: DATA_WIDTH]});
 		end
 		else begin
-			sram_128x32b_a0.char2sram(i, 32'b0);
-			sram_128x32b_a1.char2sram(i, 32'b0);
-			sram_128x32b_a2.char2sram(i, 32'b0);
-			sram_128x32b_a3.char2sram(i, 32'b0);
-			sram_128x32b_a4.char2sram(i, 32'b0);
-			sram_128x32b_a5.char2sram(i, 32'b0);
-			sram_128x32b_a6.char2sram(i, 32'b0);
-			sram_128x32b_a7.char2sram(i, 32'b0);
+			sram_256x32b_a0.char2sram(i, 32'b0);
+			sram_256x32b_a1.char2sram(i, 32'b0);
+			sram_256x32b_a2.char2sram(i, 32'b0);
+			sram_256x32b_a3.char2sram(i, 32'b0);
+			sram_256x32b_a4.char2sram(i, 32'b0);
+			sram_256x32b_a5.char2sram(i, 32'b0);
+			sram_256x32b_a6.char2sram(i, 32'b0);
+			sram_256x32b_a7.char2sram(i, 32'b0);
 
-			sram_128x32b_b0.char2sram(i, 32'b0);
-			sram_128x32b_b1.char2sram(i, 32'b0);
-			sram_128x32b_b2.char2sram(i, 32'b0);
-			sram_128x32b_b3.char2sram(i, 32'b0);
-			sram_128x32b_b4.char2sram(i, 32'b0);
-			sram_128x32b_b5.char2sram(i, 32'b0);
-			sram_128x32b_b6.char2sram(i, 32'b0);
-			sram_128x32b_b7.char2sram(i, 32'b0);
+			sram_256x32b_b0.char2sram(i, 32'b0);
+			sram_256x32b_b1.char2sram(i, 32'b0);
+			sram_256x32b_b2.char2sram(i, 32'b0);
+			sram_256x32b_b3.char2sram(i, 32'b0);
+			sram_256x32b_b4.char2sram(i, 32'b0);
+			sram_256x32b_b5.char2sram(i, 32'b0);
+			sram_256x32b_b6.char2sram(i, 32'b0);
+			sram_256x32b_b7.char2sram(i, 32'b0);
 		end
 
 	end
 	$write("SRAM a0!!!!\n");
 	for(i = 0; i< 128 ; i = i + 1) begin
-                    $write("SRAM at address %d is \n%d %d %d %d  \n",i[7:0],$signed(sram_128x32b_a0.mem[i][31:24]),$signed(sram_128x32b_a0.mem[i][23:16]),$signed(sram_128x32b_a0.mem[i][15:8]),$signed(sram_128x32b_a0.mem[i][7:0]));
+                    $write("SRAM at address %d is \n%d %d %d %d  \n",i[7:0],$signed(sram_256x32b_a0.mem[i][31:24]),$signed(sram_256x32b_a0.mem[i][23:16]),$signed(sram_256x32b_a0.mem[i][15:8]),$signed(sram_256x32b_a0.mem[i][7:0]));
 	end
 	$write("SRAM b0!!!!\n");
 	for(i = 0; i< 128 ; i = i + 1) begin
-                    $write("SRAM at address %d is \n%d %d %d %d  \n",i[7:0],$signed(sram_128x32b_b0.mem[i][31:24]),$signed(sram_128x32b_b0.mem[i][23:16]),$signed(sram_128x32b_b0.mem[i][15:8]),$signed(sram_128x32b_b0.mem[i][7:0]));
+                    $write("SRAM at address %d is \n%d %d %d %d  \n",i[7:0],$signed(sram_256x32b_b0.mem[i][31:24]),$signed(sram_256x32b_b0.mem[i][23:16]),$signed(sram_256x32b_b0.mem[i][15:8]),$signed(sram_256x32b_b0.mem[i][7:0]));
 	end
   end
 endtask	
